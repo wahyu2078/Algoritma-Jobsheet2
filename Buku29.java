@@ -49,10 +49,4 @@ public class Buku29 {
         harga = hrg;
     }
 
-    public static void main(String[] args) {
-        Buku29 bukuWahyu = new Buku29("Judul Buku Wahyu", "Pengarang Wahyu", 200, 50, 75000);
-
-        bukuWahyu.tampilInformasi();
-
-    }
 }
