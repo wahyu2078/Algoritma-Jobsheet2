@@ -18,21 +18,9 @@ public class Buku29 {
         System.out.println("Harga: Rp " + harga);
     }
 
-    public void terjual(int jml) {
-        if (stok > 0) {
-            stok -= jml;
-            if (stok < 0) {
-            }
-        } else {
-            System.out.println("Stok sudah habis!");
-        }
-    }
+    public static void main(String[] args) {
+        Buku29 bukuWahyu = new Buku29("Judul Buku John", "Pengarang John", 200, 50, 75000);
 
-    public void restock(int jml) {
-        stok += jml;
-    }
-
-    public void gantiHarga(int hrg) {
-        harga = hrg;
+        bukuWahyu.tampilInformasi();
     }
 }
