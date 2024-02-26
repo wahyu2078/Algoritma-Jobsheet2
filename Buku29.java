@@ -18,8 +18,16 @@ public class Buku29 {
         System.out.println("Harga: Rp " + harga);
     }
 
+    void terjual(int jm1) {
+        stok -= jm1;
+    }
+
+    void gantiHarga(int hrg) {
+        harga = hrg;
+    }
+
     public static void main(String[] args) {
-        Buku29 bukuWahyu = new Buku29("Judul Buku John", "Pengarang John", 200, 50, 75000);
+        Buku29 bukuWahyu = new Buku29("Judul Buku Wahyu", "Pengarang Wahyu", 200, 50, 75000);
 
         bukuWahyu.tampilInformasi();
     }
