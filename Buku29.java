@@ -18,6 +18,29 @@ public class Buku29 {
         System.out.println("Harga: Rp " + harga);
     }
 
+    public int hitungHargaTotal(int jumlahTerjual) {
+        return harga * jumlahTerjual;
+    }
+
+    public double hitungDiskon(int hargaTotal) {
+        double diskon = 0.0;
+
+        if (hargaTotal > 150000) {
+            diskon = 0.12; 
+        } else if (hargaTotal >= 75000 && hargaTotal <= 150000) {
+            diskon = 0.05; 
+        }
+
+        return diskon;
+    }
+
+    public double hitungHargaBayar(int jumlahTerjual) {
+        int hargaTotal = hitungHargaTotal(jumlahTerjual);
+        double diskon = hitungDiskon(hargaTotal);
+        
+        return hargaTotal - (hargaTotal * diskon);
+    }
+
     void terjual(int jm1) {
         stok -= jm1;
     }
@@ -30,5 +53,6 @@ public class Buku29 {
         Buku29 bukuWahyu = new Buku29("Judul Buku Wahyu", "Pengarang Wahyu", 200, 50, 75000);
 
         bukuWahyu.tampilInformasi();
+
     }
 }
