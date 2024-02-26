@@ -2,12 +2,12 @@ public class Buku29 {
     String judul, pengarang;
     int halaman, stok, harga;
 
-    public Buku29(String judul, String pengarang, int halaman, int stok, int harga) {
-        this.judul = judul;
-        this.pengarang = pengarang;
-        this.halaman = halaman;
+    public Buku29(String jud, String pg, int hal, int stok, int har) {
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
         this.stok = stok;
-        this.harga = harga;
+        harga = har;
     }
 
     public void tampilInformasi() {
@@ -19,7 +19,13 @@ public class Buku29 {
     }
 
     public void terjual(int jml) {
-        stok -= jml;
+        if (stok > 0) {
+            stok -= jml;
+            if (stok < 0) {
+            }
+        } else {
+            System.out.println("Stok sudah habis!");
+        }
     }
 
     public void restock(int jml) {
